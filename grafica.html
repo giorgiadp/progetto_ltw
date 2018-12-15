@@ -1,0 +1,136 @@
+<html>
+    <title>U N I C H E F</title>
+    <meta name="author" content="Del Citto Giulia && Di Pietro Giorgia">
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        
+    <head>
+        <script src="homeStorage.js" ></script>
+        <!--api google per query (credo)-->
+        <!-- DOVREBBE ESSERE PER JQUERY -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <!-- foglio di stile css di riferimento -->
+        <link rel=stylesheet href="stile.css" type="text/css">
+
+        <script> 
+            /*funzione per inserimento ingredienti*/ 
+            ingredienti = [];
+            function funzioneIngredieti(stringa, idCheck){
+                casella = document.getElementById('ingredienti');
+                oldText = casella.value;
+                checkBox = document.getElementById(idCheck);
+                
+                if(checkBox.checked){
+                    if(oldText == "")
+                        ingredienti.push(stringa);
+                    else
+                        ingredienti.push(stringa);
+                }
+                else{
+                    idx = ingredienti.indexOf(stringa);
+                    ingredienti.splice(idx, 1);
+                }
+
+                casella.value = "";
+                for(i=0;i<ingredienti.length; i++){
+                    if(i==0)
+                        casella.value += ingredienti[i];
+                    else
+                        casella.value += ", "+ingredienti[i];
+                }
+                return ingredienti;
+            }   
+
+        </script>
+    </head>
+
+    <body onload="cambiabottoni()">
+        <div id="generale" style="opacity: 1.0;">
+            <div id="pulsanti">
+                <button class="bottoni" id="battonsIscriviti" onclick="funzioneIscriviti()">Iscriviti</button>
+                <button class="bottoni" id="battonsAccedi" onclick="funzioneAccedi()">Accedi</button> 
+            </div>
+            <div id="pulsanti">
+                <button class="bottoni" id="pulsanteLogout" onclick="funzioneLogout()">Esci</button>
+            </div>
+
+            <div id="container1">
+                <div id="formCerca">
+                    <div id="barra">
+                        <INPUT type="TEXTAREA" id="ingredienti">
+                    </div>
+                    <br><br>
+                    <div id="listaIngredienti">
+                        <table>
+                            <tr>
+                                <td><input type="checkbox" name="pasta" value="pasta" id="pasta" class="cella" onclick="funzioneIngredieti(value, id)"/>Pasta</td>
+                                <td><input type="checkbox" name="pesce" value="pesce" id="pesce" class="cella" onclick="funzioneIngredieti(value,id)">Pesce</td>
+                                <td><input type="checkbox" name="pesto" value="pesto" id="pesto" class="cella" onclick="funzioneIngredieti(value,id)">Pesto</td>
+                                <td><input type="checkbox" name="pesce" value="pesce" id="pesce" class="cella" onclick="funzioneIngredieti(value,id)">Pesce</td>
+                                <td><input type="checkbox" name="pesto" value="pesto" id="pesto" class="cella" onclick="funzioneIngredieti(value,id)">Pesto</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" name="philadelphia" value="philadelphia" id="philadelphia" class="cella" onclick="funzioneIngredieti(value, id)"/>Philadelphia</td>
+                                <td><input type="checkbox" name="pollo" value="pollo" id="pollo" class="cella" onclick="funzioneIngredieti(value,id)">Pollo</td>
+                                <td><input type="checkbox" name="riso" value="riso" id="riso" class= "cella" onclick="funzioneIngredieti(value,id)">Riso</td>
+                                <td><input type="checkbox" name="pesce" value="pesce" id="pesce" class="cella" onclick="funzioneIngredieti(value,id)">Pesce</td>
+                                <td><input type="checkbox" name="pesto" value="pesto" id="pesto" class="cella" onclick="funzioneIngredieti(value,id)">Pesto</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" name="tonno" value="tonno" id="tonno" class="cella" onclick="funzioneIngredieti(value, id)"/>Tonno</td>
+                                <td><input type="checkbox" name="uova" value="uova" id="uova" class="cella" onclick="funzioneIngredieti(value,id)">Uova</td>
+                                <td><input type="checkbox" name="zucchine" value="zucchine" id="zucchine" class="cella" onclick="funzioneIngredieti(value,id)">Zucchine</td>
+                                <td><input type="checkbox" name="pesce" value="pesce" id="pesce" class="cella" onclick="funzioneIngredieti(value,id)">Pesce</td>
+                                <td><input type="checkbox" name="pesto" value="pesto" id="pesto" class="cella" onclick="funzioneIngredieti(value,id)">Pesto</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <br><br>
+                    <div id="bottoni_pos">
+                        <table>
+                            <tr>
+                                <td><button class="bottoni" id="cerca" onclick="funzioneCerca()">Cerca</button></td>
+                            </tr>
+                            <tr>
+                                <td><button class="bottoni2" id="aggiungiRicetta" onclick="aggiungiRicetta()">Aggiungi ricetta</button></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- <div id="container2">
+            <div id="inEvidenza">
+                    <div id="popolari">Le più votate</div>
+                    <div id="stelline">
+                        <div style="display:inline-block; float:left;"> 
+                            <img id="1" height="22" width="22" src="star-on.png"> 
+                        </div>
+
+                        <div style="display:inline-block; float:left;"> 
+                            <img height="22" width="22" src="star-on.png"> 
+                        </div>
+
+                        <div style="display:inline-block; float:left;"> 
+                            <img height="22" width="22" src="star-on.png"> 
+                        </div>
+
+                        <div style="display:inline-block; float:left;">
+                            <img height="22" width="22" src="star-on.png"> 
+                        </div>
+
+                        <div style="display:inline-block; float:left;"> 
+                            <img height="22" width="22" src="star-on.png"> 
+                        </div>
+                    </div>
+            </div>
+
+            <div id="dolciContainer">
+                    <div id="dolci">Prova anche i nostri dolci a prova di nabbi</div><br>
+            </div>
+        </div> -->
+                    
+    </body>
+</html>

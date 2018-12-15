@@ -1,0 +1,118 @@
+<html>
+    <head>
+        <script src="ricetteStorage.js" ></script> 
+        <!--api google per query (credo)-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <link rel=stylesheet href="stile.css" type="text/css">
+    </head>
+
+    <body>
+        <div id="generale" style="opacity: 1.0;"> 
+            <div id="container" style="width:70%; margin: auto;">
+                <div id="logo">
+                    <img id="logo1" height="120" width="700" src="LogoMakr_7LmLDL.png">
+                </div>
+                <br>
+                <br>
+                
+                <div id="pulsanti" >
+                    <button class="bottoni" id="battonsIscriviti" onclick="funzioneIscriviti()"> Iscriviti</button>
+                    <button class="bottoni" id="battonsAccedi" onclick="funzioneAccedi()"> Accedi </button> 
+                </div>
+               <button class="bottoni" id="pulsanteLogout" onclick="funzioneLogout()"> Logout </button>
+                
+                <img  id ="foto" src="faciola.jpg">
+                <td><h2><label for="NomeRicetta" class="Etichette">Pasta al Tonno</label></h2></td>
+                <div id="areaRicetta">  
+                    <br>
+                    <br>
+                    <br>
+                    <td><label for="Tempo" class="Etichette">Tempo: 20 min</label></td>
+                    <br>
+                    <td><label for="Difficolta" class="Etichette">Difficoltà: facile</label></td>
+                    <div id="listaIngredientiRicetta"><br>
+                        <td><label for="IngredienteRicetta" class="Etichette">Pasta</label></td>
+                        <br>
+                        <td><label for="IngredienteRicetta" class="Etichette">Tonno</label></td>
+                        <br>
+                        <td><label for="IngredienteRicetta" class="Etichette">Sale</label></td>
+                        <br>
+                        <td><label for="IngredienteRicetta" class="Etichette">Pomodorini</label></td>
+                        <br>
+                    </div>
+                    <div id="procedimento">
+                            <br>
+                            <td><label for="ricetta" class="Etichette" >
+                                fai bollire l'acqua metti il sale metti l'acqua fai cuocere scola metti il tonno.... FATTO!!!
+                            </label></td>      
+                    </div>
+                </div>
+
+            </div>    
+        </div>
+<!------------FINO A QUI È OK  C'È DA SISTEMARE L'IMPAGINAZIONE------------>
+
+
+
+            <!-- <script>StampoStelle1('pastaTonno')</script>    ------ non so che fa-->
+
+            <div id="Commenti2" class="overlay">
+            <div id="Commenti" style="display:none;">
+
+                <!-- <button type='button' onclick="location.reload();" style="margin-left: 92%; margin-top: 2%;"></button>  <---- NON SO COSA FA-->
+
+                <!-- SISTEMA LE STELLE ----- NON TOCCARE CHE SI FA CASINO-->
+                <div id="divStelle" style="display:inline-block; width:36%; height: 12%px;">
+                
+                    <div id="1" style="display:inline-block; float:left;"> 
+                        <img id="1" height="20" width="20" src="star-off.png" class="Stel"> 
+                    </div>
+
+                    <div id="2" style="display:inline-block; float:left;"> 
+                        <img id ="2" height="20" width="20" src="star-off.png" class="Stel"> 
+                    </div>
+
+                    <div id="3" style="display:inline-block; float:left;"> 
+                        <img id ="3" height="20" width="20" src="star-off.png" class="Stel"> 
+                    </div>
+
+                    <div id="4" style="display:inline-block; float:left;">
+                        <img id ="4" height="20" width="20" src="star-off.png" class="Stel"> 
+                    </div>
+
+                    <div id="5" style="display:inline-block; float:left;"> 
+                        <img id ="5" height="20" width="20" src="star-off.png" class="Stel"> 
+                    </div>
+                </div>
+                <!-- NON TOCCARE FINO A QUI-->
+
+                <form name="formCom"  method="post" onsubmit="return SalvoCommento2(document.formCom.titolo1.value,document.formCom.commento.value,'pastaTonno',document.formCom.numStelle.value)">
+                    <div id = "areaCommenti">
+                        <label for="Titolo" class="Etichette" >Titolo</label>
+                        <br>
+                        <input type="text" name="titolo1" id="contenuto" required>
+                        <br>
+                        <br>
+                        <label for="Recensione" class="Etichette">La tua recensione</label><br>
+                        <textarea rows="8" cols="50" name="commento" id="commento" required></textarea>
+                        <br> 
+                        <br>
+                        <input type="submit" id="bottoneRecensione"  value=Invia>
+                        <input type="hidden" name="numStelle" id="numStelle" value="-1">
+                    </div>
+                </form>
+            </div>    
+            </div>
+
+            <br><br><br>
+        <button class="bottoni" id="bottoneScriviRecensione" onclick="verificaLogin()">Scrivi la tua recensione </button>
+        <br>
+        <br>
+        <br>
+        <div id="Scritte" style="display:inline-block;">
+            <script>
+                StampoC2("pastaTonno");
+            </script>
+        </div>
+    </body>
+</html>

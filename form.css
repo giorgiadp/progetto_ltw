@@ -1,0 +1,62 @@
+@font-face {
+    font-family: 'Champagne & Limousines';
+    src: url('ChampagneLimousines-Italic.eot');
+    src: url('ChampagneLimousines-Italic.eot?#iefix') format('embedded-opentype'),
+        url('ChampagneLimousines-Italic.woff') format('woff'),
+        url('ChampagneLimousines-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+body{
+    background-image:url('sfondo.jpeg');
+    background-size: cover;
+    font-family: "Champagne & Limousines" , "ChampagneLimousines-Italic" , italic ; 
+}
+
+#formIscrivi, #formAccedi{
+    position: relative;
+    left: 32vw;
+    margin-top: 15vw;
+}
+
+table{ 
+    font-family: "Champagne & Limousines" , "ChampagneLimousines-Italic" , italic ; 
+    font-size: 1.5vw;
+}
+
+.inserimento{
+    position: relative;
+    background: rgb(238, 238, 238);
+    border: none;
+    height: 2vw;
+    width: 20vw;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+    margin: auto; 
+    font-family: "Champagne & Limousines" , "ChampagneLimousines-Italic" , italic ;
+    border-radius: 3%; 
+}
+
+.bottoni{
+    position: relative;
+    background: rgb(238, 238, 238);
+    border: none;
+    padding: 0vw;
+    height: 2vw;
+    width: 6vw;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto; 
+    font-family: "Champagne & Limousines" , "ChampagneLimousines-Italic" , italic ; 
+    font-size: 1.5vw;
+    border-radius: 5%; 
+}
+
+#bottoni_pos{
+    position: relative;
+    left: 13vw;
+}

@@ -1,0 +1,192 @@
+@font-face {
+    font-family: 'Champagne & Limousines';
+    src: url('ChampagneLimousines-Italic.eot');
+    src: url('ChampagneLimousines-Italic.eot?#iefix') format('embedded-opentype'),
+        url('ChampagneLimousines-Italic.woff') format('woff'),
+        url('ChampagneLimousines-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+body{
+    background-image:url('sfondo.jpeg');
+    background-size: cover;
+    font-family: "Champagne & Limousines" , "ChampagneLimousines-Italic" , italic ; 
+}
+
+#formCerca{
+    position: relative;
+    left: 20vw;
+    right: 20vw;
+    margin-top: 12vw;
+}
+
+#barra{
+    position: relative;
+    left: 8vw;
+}
+
+#listaIngredienti{
+    position: relative;
+}
+
+table{ 
+    font-family: "Champagne & Limousines" , "ChampagneLimousines-Italic" , italic ; 
+    font-size: 1.5vw;
+}
+
+.cella{
+    position: relative;
+    background: rgb(238, 238, 238);
+    border: none;
+    height: 2vw;
+    width: 6vw;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+    margin: auto; 
+    font-family: "Champagne & Limousines" , "ChampagneLimousines-Italic" , italic ; 
+    border-radius: 5%; 
+}
+
+.cella2{
+    position: relative;
+    background: rgb(238, 238, 238);
+    border: none;
+    height: 2vw;
+    width: 20vw;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+    margin: auto; 
+    font-family: "Champagne & Limousines" , "ChampagneLimousines-Italic" , italic ;  
+}
+
+.boxProcedimento{
+    position: relative;
+    background: rgb(238, 238, 238);
+    border: none;
+    height: 2vw;
+    width: 40vw;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+    margin: auto; 
+    font-family: "Champagne & Limousines" , "ChampagneLimousines-Italic" , italic ;  
+}
+
+#ingredienti{
+    position: relative;
+    background: rgb(238, 238, 238);
+    border: none;
+    padding: 0vw;
+    height: 2.5vw;
+    width: 40vw;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto; 
+    border-radius: 5%;
+}
+
+.bottoni{
+    position: relative;
+    background: rgb(238, 238, 238);
+    border: none;
+    padding: 0vw;
+    height: 2vw;
+    width: 6vw;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto; 
+    font-family: "Champagne & Limousines" , "ChampagneLimousines-Italic" , italic ; 
+    font-size: 1.5vw;
+    border-radius: 5%; 
+}
+
+.bottoni2{
+    position: relative;
+    background: rgb(238, 238, 238);
+    border: none;
+    padding: 0vw;
+    height: 4vw;
+    width: 6vw;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto; 
+    font-family: "Champagne & Limousines" , "ChampagneLimousines-Italic" , italic ; 
+    font-size: 1.5vw;
+    border-radius: 5%; 
+}
+
+#bottoni_pos{
+    position: relative;
+    left: 24vw;
+}
+
+#pulsanti {
+    /* qui uso absolute per fissare accedi/iscriviti indipendentemente da tutto il resto */
+    position:absolute;
+    right:5px; top:5px; 
+}
+
+#formRicetta{
+    position: relative;
+    left: 24vw;
+    right: 20vw;
+    margin-top: 12vw;
+}
+
+#inEvidenza{
+    margin-top: 25%;
+    height: 40%;
+    background-color:rgb(175, 33, 33);
+    opacity: 0.75;
+    border-radius: 3px;
+    /* box-shadow: 1px 3px 10px 5px rgb(167, 33, 33) ; */
+    
+}
+
+#popolari{
+    display: inline-block;
+    float: left;
+    margin-left: 15px;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: "Champagne & Limousines" , "ChampagneLimousines-Italic" , italic; 
+}
+
+#stelline{
+    display: inline-block;
+    float: left;
+    margin-top: 5px;
+    margin-left: 10px;
+}
+
+
+#dolciContainer{
+    margin-top: 15px;
+    height: 40%;
+    background-color:rgb(175, 33, 33);
+    opacity: 0.75;
+    border-radius: 3px;
+    /* box-shadow: 1px 3px 10px 5px rgb(167, 33, 33) ; */
+    font-size: 30px;
+    font-family: "Champagne & Limousines" , "ChampagneLimousines-Italic" , italic ; 
+}
+
+#dolci{
+    display: inline-block;
+    float: left;
+    margin-left: 15px;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: "Champagne & Limousines" , "ChampagneLimousines-Italic" , italic ; 
+}
+
+

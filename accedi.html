@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="it">
+    <!-- +++++++++++++++++++++++++++++ NON SI TOCCA PIU SE NON PER  LA GRAFICA  PENA PER CHI LO MODIFICA TAGLIO DELLE MANI !!!!!!!!!!!!-->
+    <head>
+            <meta charset="utf-8"/>
+            <!--meta name="viewport" content="width=device-width, initial-scale=1"-->
+            <link rel=stylesheet href="form.css" type="text/css">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    </head>
+    <script>
+        function verifica(emailA, passwordA, a){
+            for(i=0; a!=null && i<a.length; i++){
+                if(a[i].email==emailA && a[i].password==passwordA ) {
+                    return true;
+                }
+            }
+            
+            return false;
+        }
+        function checkUtente(){
+            emailA=document.getElementById("email").value;
+            passwordA=document.getElementById("password").value;
+            alert(emailA + passwordA);
+            var a=JSON.parse( localStorage.getItem('Utente'));
+            alert(a)
+            if(verifica(emailA,passwordA,a)==true){
+                alert("credenziali confermate");
+                sessionStorage.setItem('Loggato', JSON.stringify("si"));
+                window.location.href="./grafica.html";
+                return false;
+            }
+            
+            alert("credenziali non valide");
+            return false;
+            
+        }
+    </script>
+    <body >
+        <form id="formAccedi" onsubmit="return checkUtente()" action="#">
+            <table>    
+                <tr>
+                    <td><label for="Email" class="Etichette">Email</label></td>
+                    <td><input type="email" id="email" name="email" class="inserimento" placeholder="Inserisci la tua email" required autofocus></td>
+                </tr>
+                <tr>
+                    <td><label for="Password" class="Etichette">Password</label></td>
+                    <td><input type="password" id="password" name="password" class="inserimento" placeholder="Inserisci la tua password" required autofocus></td>
+                    <td><label for="Mp">Mostra password</label></td>
+                    <td><input type="checkbox" onchange="document.getElementById('password').type = this.checked ? 'text' : 'password'">
+                </tr>
+            </table>
+            <br><br>
+            <div id="bottoni_pos">
+                <button type="submit" class="bottoni"> Accedi </button> 
+            </div>
+        </form>
+    </body>
+</html>
