@@ -15,24 +15,30 @@ body{
 }
 
 #formCerca{
-    position: relative;
-    left: 20vw;
-    right: 20vw;
+    position: absolute;
     margin-top: 12vw;
+    left: 0vw;
 }
 
 #barra{
     position: relative;
-    left: 8vw;
+    left: 30vw;
 }
 
 #listaIngredienti{
     position: relative;
+    left: 17vw;
 }
 
 table{ 
     font-family: "Champagne & Limousines" , "ChampagneLimousines-Italic" , italic ; 
     font-size: 1.5vw;
+}
+
+#tab{
+    position: relative;
+    width: 40%;
+    left: 25vw;
 }
 
 .cella{
@@ -126,7 +132,7 @@ table{
 
 #bottoni_pos{
     position: relative;
-    left: 24vw;
+    left: 20vw;
 }
 
 #pulsanti {
@@ -170,23 +176,64 @@ table{
 
 
 #dolciContainer{
-    margin-top: 15px;
-    height: 40%;
+    position: absolute;
+    top: 32vw;
+    height: 16vw;
+    width: 98%;
+    left: 1vw;
     background-color:rgb(175, 33, 33);
-    opacity: 0.75;
-    border-radius: 3px;
-    /* box-shadow: 1px 3px 10px 5px rgb(167, 33, 33) ; */
-    font-size: 30px;
-    font-family: "Champagne & Limousines" , "ChampagneLimousines-Italic" , italic ; 
+    border-radius: 5px;
+    font-family: "Champagne & Limousines" , "ChampagneLimousines-Italic" , italic ;
+    font-size: 1.5vw;    
 }
 
-#dolci{
-    display: inline-block;
-    float: left;
-    margin-left: 15px;
-    font-size: 30px;
-    font-weight: bold;
-    font-family: "Champagne & Limousines" , "ChampagneLimousines-Italic" , italic ; 
+#caption_dolci{
+    position: relative;
+    left: 1vw;
+    top: 0.5vw;
 }
 
+#dolce{
+    position: relative;
+    left: 1vw;
+    top: 1vw;   
+}
 
+/* specifiche per gestire la transizione sui dolci */
+.transizione {
+    position: relative;
+    overflow: hidden;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.transizione img {
+    display: block;
+    -moz-transition:800ms;
+    -webkit-transition: 800ms; 
+    -o-transition: 800ms; 
+    transition: 800ms;
+}
+
+.transizione figcaption {
+    background: rgba(0,0,0,0.8);
+    color: #fff;
+    padding: .5rem;
+    position: absolute;
+    -webkit-transition: 800ms; 
+    -o-transition: 800ms; 
+    transition: 800ms;
+    width: 100%;
+    cursor: pointer;
+}
+
+.transizione[data-effect="fade-in"] figcaption {
+    top: 0;
+    left: 0;
+    height: 100%;
+    opacity: 0;
+}
+
+.transizione[data-effect="fade-in"]:hover figcaption {
+    opacity: 1;
+}
