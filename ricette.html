@@ -1,50 +1,37 @@
 <html>
     <head>
         <script src="ricetteStorage.js" ></script> 
+        <script src="homeStorage.js"></script> <!--mi serve per la funzione che chiama onload del body-->
         <!--api google per query (credo)-->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <link rel=stylesheet href="stile.css" type="text/css">
     </head>
 
-    <body>
+    <body onload="cambiabottoni()">
         <div id="generale" style="opacity: 1.0;"> 
-            <div id="container" style="width:70%; margin: auto;">
-                <div id="logo">
-                    <img id="logo1" height="120" width="700" src="LogoMakr_7LmLDL.png">
-                </div>
-                <br>
-                <br>
-                
+            <div id="container" style="width:70%; margin: auto;">                
                 <div id="pulsanti" >
                     <button class="bottoni" id="battonsIscriviti" onclick="funzioneIscriviti()"> Iscriviti</button>
                     <button class="bottoni" id="battonsAccedi" onclick="funzioneAccedi()"> Accedi </button> 
                 </div>
                <button class="bottoni" id="pulsanteLogout" onclick="funzioneLogout()"> Logout </button>
                 
-                <img  id ="foto" src="faciola.jpg">
-                <td><h2><label for="NomeRicetta" class="Etichette">Pasta al Tonno</label></h2></td>
+                
+                <td><h2><label for="NomeRicetta" id="titolo" class="Etichette"></label></h2></td>
                 <div id="areaRicetta">  
                     <br>
                     <br>
                     <br>
-                    <td><label for="Tempo" class="Etichette">Tempo: 20 min</label></td>
+                    <td><label for="Tempo"  id="tempo" class="Etichette"> </label></td>
                     <br>
-                    <td><label for="Difficolta" class="Etichette">Difficoltà: facile</label></td>
+                    <td><label for="Difficolta" id="difficolta" class="Etichette"></label></td>
                     <div id="listaIngredientiRicetta"><br>
-                        <td><label for="IngredienteRicetta" class="Etichette">Pasta</label></td>
-                        <br>
-                        <td><label for="IngredienteRicetta" class="Etichette">Tonno</label></td>
-                        <br>
-                        <td><label for="IngredienteRicetta" class="Etichette">Sale</label></td>
-                        <br>
-                        <td><label for="IngredienteRicetta" class="Etichette">Pomodorini</label></td>
+                        <td><label for="IngredienteRicetta" id="ingredienti" class="Etichette">Pasta</label></td>
                         <br>
                     </div>
                     <div id="procedimento">
                             <br>
-                            <td><label for="ricetta" class="Etichette" >
-                                fai bollire l'acqua metti il sale metti l'acqua fai cuocere scola metti il tonno.... FATTO!!!
-                            </label></td>      
+                            <td><label for="ricetta" id="procedimento" class="Etichette" ></label></td>      
                     </div>
                 </div>
 

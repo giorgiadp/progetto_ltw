@@ -39,14 +39,28 @@ function funzioneCerca(){
     }
 
     if (max==0){
-        alert("ricetta non trovata, puoi inserire la tua ricett dopo aver fatto il login!");
+        alert("ricetta non trovata, puoi inserire la tua ricetta dopo aver fatto il login!");
     }
     else{
         alert("ricetta trovata  " + storageIngredienti[ricMax].titolo);
+        mostraRicetta(storageIngredienti[ricMax]);
+        
     }
 
+}
 
-
+function mostraRicetta(storageRicetta){
+    alert("in mostraRicetta");
+    titolo=storageRicetta.titolo;
+    tempo=storageRicetta.tempo;
+    difficolta=storageRicetta.difficolta;
+    arrayIngredienti=storageRicetta.ingredienti;
+    procedimento=storageRicetta.procedimento;
+    foto=storageRicetta.procedimento;
+    
+    alert(titolo + tempo+ difficolta+ arrayIngredienti+ procedimento+ foto);
+    //devo capire come fare a caricare elemnti su pagina diversa da quella di partenza
+    window.location.href="./ricette.html";
 }
 
 function funzioneIscriviti(){
