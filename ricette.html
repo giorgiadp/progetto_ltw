@@ -7,7 +7,7 @@
         <link rel=stylesheet href="stile.css" type="text/css">
     </head>
 
-    <body onload="cambiabottoni()">
+    <body onload="mostraRicetta()">
         <div id="generale" style="opacity: 1.0;"> 
             <div id="container" style="width:70%; margin: auto;">                
                 <div id="pulsanti" >
@@ -17,21 +17,17 @@
                <button class="bottoni" id="pulsanteLogout" onclick="funzioneLogout()"> Logout </button>
                 
                 
-                <td><h2><label for="NomeRicetta" id="titolo" class="Etichette"></label></h2></td>
+                <td><h2><input type="text" id="titolo" value="" class="Etichette" readonly></h2></td>
                 <div id="areaRicetta">  
                     <br>
+                    <td><input type="text" id="tempo" value="" class="Etichette" readonly></td>
                     <br>
+                    <td><input type="text" id="difficolta" value="" class="Etichette" readonly></td>
+                    <td><input type="text" id="ingredienti" value="" class="Etichette" readonly></label></td>
                     <br>
-                    <td><label for="Tempo"  id="tempo" class="Etichette"> </label></td>
-                    <br>
-                    <td><label for="Difficolta" id="difficolta" class="Etichette"></label></td>
-                    <div id="listaIngredientiRicetta"><br>
-                        <td><label for="IngredienteRicetta" id="ingredienti" class="Etichette">Pasta</label></td>
-                        <br>
-                    </div>
-                    <div id="procedimento">
+                    <div id="procedimentoDiv">
                             <br>
-                            <td><label for="ricetta" id="procedimento" class="Etichette" ></label></td>      
+                            <td><input type="text" id="procedimento" value="" class="Etichette" readonly></td>      
                     </div>
                 </div>
 
