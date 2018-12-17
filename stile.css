@@ -35,6 +35,10 @@ table{
     font-size: 1.5vw;
 }
 
+img{
+    height: 10vw;
+}
+
 /* checkbox ingredienti */
 .cella{
     position: relative;
@@ -149,7 +153,7 @@ table{
 
 #dolciContainer{
     position: absolute;
-    top: 32vw;
+    top: 40vw;
     height: 16vw;
     width: 98%;
     left: 1vw;
