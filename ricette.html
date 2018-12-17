@@ -8,7 +8,7 @@
     </head>
 
     <body onload="mostraRicetta()">
-        <div id="generale" style="opacity: 1.0;"> 
+        <div id="generale"> 
             <div id="container" style="width:70%; margin: auto;">                
                 <div id="pulsanti" >
                     <button class="bottoni" id="battonsIscriviti" onclick="funzioneIscriviti()"> Iscriviti</button>
@@ -16,86 +16,33 @@
                 </div>
                <button class="bottoni" id="pulsanteLogout" onclick="funzioneLogout()"> Logout </button>
                 
-                <div id="formRicetta"> 
-                    <td><h2><input type="text" id="titolo" value="" class="cella2" readonly></h2></td>
+                
+                <td><h2><input type="text" id="titolo" value="" class="Etichette" readonly></h2></td>
+                <div id="areaRicetta">  
                     <br>
-                    <td><input type="text" id="tempo" value="" class="cella2" readonly></td>
+                    <td><input type="text" id="tempo" value="" class="Etichette" readonly></td>
                     <br>
-                    <td><input type="text" id="difficolta" value="" class="cella2" readonly></td>
-                    <td><input type="text" id="ingredienti" value="" class="cella2" readonly></label></td>
+                    <td><input type="text" id="difficolta" value="" class="Etichette" readonly></td>
+                    <td><input type="text" id="ingredienti" value="" class="Etichette" readonly></label></td>
                     <br>
                     <div id="procedimentoDiv">
                             <br>
-                            <td><input type="text" id="procedimento" value="" class="cella2" readonly></td>      
-                    </div>
-                    
-                </div>
-
-            </div>    
-        </div>
-<!------------FINO A QUI È OK  C'È DA SISTEMARE L'IMPAGINAZIONE------------>
-
-
-
-            <!-- <script>StampoStelle1('pastaTonno')</script>    ------ non so che fa-->
-
-            <div id="Commenti2" class="overlay">
-            <div id="Commenti" style="display:none;">
-
-                <!-- <button type='button' onclick="location.reload();" style="margin-left: 92%; margin-top: 2%;"></button>  <---- NON SO COSA FA-->
-
-                <!-- SISTEMA LE STELLE ----- NON TOCCARE CHE SI FA CASINO-->
-                <div id="divStelle" style="display:inline-block; width:36%; height: 12%px;">
-                
-                    <div id="1" style="display:inline-block; float:left;"> 
-                        <img id="1" height="20" width="20" src="star-off.png" class="Stel"> 
-                    </div>
-
-                    <div id="2" style="display:inline-block; float:left;"> 
-                        <img id ="2" height="20" width="20" src="star-off.png" class="Stel"> 
-                    </div>
-
-                    <div id="3" style="display:inline-block; float:left;"> 
-                        <img id ="3" height="20" width="20" src="star-off.png" class="Stel"> 
-                    </div>
-
-                    <div id="4" style="display:inline-block; float:left;">
-                        <img id ="4" height="20" width="20" src="star-off.png" class="Stel"> 
-                    </div>
-
-                    <div id="5" style="display:inline-block; float:left;"> 
-                        <img id ="5" height="20" width="20" src="star-off.png" class="Stel"> 
+                            <td><input type="text" id="procedimento" value="" class="Etichette" readonly></td>      
                     </div>
                 </div>
-                <!-- NON TOCCARE FINO A QUI-->
-
-                <form name="formCom"  method="post" onsubmit="return SalvoCommento2(document.formCom.titolo1.value,document.formCom.commento.value,'pastaTonno',document.formCom.numStelle.value)">
-                    <div id = "areaCommenti">
-                        <label for="Titolo" class="Etichette" >Titolo</label>
-                        <br>
-                        <input type="text" name="titolo1" id="contenuto" required>
-                        <br>
-                        <br>
-                        <label for="Recensione" class="Etichette">La tua recensione</label><br>
-                        <textarea rows="8" cols="50" name="commento" id="commento" required></textarea>
-                        <br> 
-                        <br>
-                        <input type="submit" id="bottoneRecensione"  value=Invia>
-                        <input type="hidden" name="numStelle" id="numStelle" value="-1">
-                    </div>
-                </form>
-            </div>    
-            </div>
-
-            <br><br><br>
-        <button class="bottoni" id="bottoneScriviRecensione" onclick="verificaLogin()">Scrivi la tua recensione </button>
-        <br>
-        <br>
-        <br>
-        <div id="Scritte" style="display:inline-block;">
-            <script>
-                StampoC2("pastaTonno");
-            </script>
-        </div>
+                <button class="bottoni" id="pulsanteRecensione" onclick="valutaRicetta()"> valuta ricetta </button> <!--sta in ricettestorage.js-->
+            </div>   
+            <!------------FINO A QUI È OK  C'È DA SISTEMARE L'IMPAGINAZIONE------------>     
+        </div>  
+        <form id="formValuta" style="display:none;">
+                <img id ="1" height="20" width="20" src="star-off.png" class="Stelle" onmouseover="colora(1)" onmouseout="decolora(1)" onclick="salvaNumStella(1)">
+                <img id ="2" height="20" width="20" src="star-off.png" class="Stelle" onmouseover="colora(2)" onmouseout="decolora(2)" onclick="salvaNumStella(2)">
+                <img id ="3" height="20" width="20" src="star-off.png" class="Stelle" onmouseover="colora(3)" onmouseout="decolora(3)" onclick="salvaNumStella(3)">
+                <img id ="4" height="20" width="20" src="star-off.png" class="Stelle" onmouseover="colora(4)" onmouseout="decolora(4)" onclick="salvaNumStella(4)">
+                <img id ="5" height="20" width="20" src="star-off.png" class="Stelle" onmouseover="colora(5)" onmouseout="decolora(5)" onclick="salvaNumStella(5)">
+                <br>
+                <br>
+                <button class="bottoni" id="pulsanteValutazione" onclick="mandaValutazione()"> conferma valutazione </button>
+        </form>     
     </body>
 </html>

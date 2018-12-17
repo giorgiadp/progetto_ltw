@@ -10,41 +10,46 @@ function funzioneCerca(){
     
     //ciclo sulle ricette dello storage
     var list=[];
-    for(j=0; j<storageIngredienti.length; j++){
-        //faccio divetare la stringa array
-        var arrayStorage=storageIngredienti[j].ingredienti.replace(/ /g, '').split(',');
-        //ciclo su ingredienti di ricetta j 
-        c=0;
-        for(k=0; k<arrayStorage.length; k++){
-            //ciclo sulla lista degli ingredienti cercati
-            for (i=0; i<listaIngredienti.length; i++){
-                if(arrayStorage[k] == listaIngredienti[i]){
-                    c++;
+    if(storageIngredienti != null){
+        for(j=0; j<storageIngredienti.length; j++){
+            //faccio divetare la stringa array
+            var arrayStorage=storageIngredienti[j].ingredienti.replace(/ /g, '').split(',');
+            //ciclo su ingredienti di ricetta j 
+            c=0;
+            for(k=0; k<arrayStorage.length; k++){
+                //ciclo sulla lista degli ingredienti cercati
+                for (i=0; i<listaIngredienti.length; i++){
+                    if(arrayStorage[k] == listaIngredienti[i]){
+                        c++;
+                    }
                 }
             }
+            var elem=[j,c];
+            list.push(elem);
         }
-        var elem=[j,c];
-        list.push(elem);
-    }
     
-    //trovo la ricetta con il massimo degli ingredienti in comune
-    var max=0;
-    var ricMax=0
-    for (i=0; i<list.length; i++){
-        if(list[i][1] > max){
-            max=list[i][1];
-            ricMax=list[i][0];
+        //trovo la ricetta con il massimo degli ingredienti in comune
+        var max=0;
+        var ricMax=0
+        for (i=0; i<list.length; i++){
+            if(list[i][1] > max){
+                max=list[i][1];
+                ricMax=list[i][0];
+            }
         }
-    }
 
-    if (max==0){
-        alert("ricetta non trovata, puoi inserire la tua ricetta dopo aver fatto il login!");
+        if (max==0){
+            alert("ricetta non trovata, puoi inserire la tua ricetta dopo aver fatto il login!");
+        }
+        else{
+            alert("ricetta trovata  " + storageIngredienti[ricMax].titolo);
+            sessionStorage.setItem('indiceRicetta', JSON.stringify( ricMax));
+            window.location.href="./ricette.html";
+            
+        }
     }
     else{
-        alert("ricetta trovata  " + storageIngredienti[ricMax].titolo);
-        sessionStorage.setItem('indiceRicetta', JSON.stringify( ricMax));
-        window.location.href="./ricette.html";
-        
+        alert("non sono presenti ricette, aggiungine una!");
     }
 
 }
@@ -60,7 +65,7 @@ function mostraRicetta(){
     document.getElementById('ingredienti').value= stoRic.ingredienti;
     document.getElementById('procedimento').value= stoRic.procedimento;
     //document.getElementById('foto').value= stoRic.foto;
-   
+    document.getElementById('valutazione').value=stoRic.stelle;
 }
 
 function funzioneIscriviti(){
