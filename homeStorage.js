@@ -65,7 +65,15 @@ function mostraRicetta(){
     document.getElementById('ingredienti').value= stoRic.ingredienti;
     document.getElementById('procedimento').value= stoRic.procedimento;
     //document.getElementById('foto').value= stoRic.foto;
-    document.getElementById('valutazione').value=stoRic.stelle;
+    stampaStelle(stoRic.stelle);
+}
+
+function stampaStelle(n){
+    var intero = Math.round(n);
+    for(i=intero; i>0; n--){
+        var imm=document.getElementById(i+"voto")
+        imm.src="star-on.png";
+    }
 }
 
 function funzioneIscriviti(){
