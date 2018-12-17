@@ -4,9 +4,7 @@
     <head>
             <title>Accedi</title>
             <meta charset="utf-8"/>
-            <!--meta name="viewport" content="width=device-width, initial-scale=1"-->
             <link rel=stylesheet href="form.css" type="text/css">
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     </head>
     <script>
         function verifica(emailA, passwordA, a){
@@ -21,9 +19,7 @@
         function checkUtente(){
             emailA=document.getElementById("email").value;
             passwordA=document.getElementById("password").value;
-            alert(emailA + passwordA);
             var a=JSON.parse( localStorage.getItem('Utente'));
-            alert(a)
             if(verifica(emailA,passwordA,a)==true){
                 alert("credenziali confermate");
                 sessionStorage.setItem('Loggato', JSON.stringify("si"));
