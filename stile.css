@@ -22,7 +22,7 @@ body{
 
 #barra{
     position: relative;
-    left: 30vw;
+    left: 25vw;
 }
 
 #listaIngredienti{
@@ -35,12 +35,7 @@ table{
     font-size: 1.5vw;
 }
 
-#tab{
-    position: relative;
-    width: 40%;
-    left: 25vw;
-}
-
+/* checkbox ingredienti */
 .cella{
     position: relative;
     background: rgb(238, 238, 238);
@@ -52,7 +47,7 @@ table{
     cursor: pointer;
     margin: auto; 
     font-family: "Champagne & Limousines" , "ChampagneLimousines-Italic" , italic ; 
-    border-radius: 5%; 
+    border-radius: 5px; 
 }
 
 .cella2{
@@ -65,7 +60,8 @@ table{
     display: inline-block;
     cursor: pointer;
     margin: auto; 
-    font-family: "Champagne & Limousines" , "ChampagneLimousines-Italic" , italic ;  
+    font-family: "Champagne & Limousines" , "ChampagneLimousines-Italic" , italic ;
+    border-radius: 5px;
 }
 
 .boxProcedimento{
@@ -81,6 +77,7 @@ table{
     font-family: "Champagne & Limousines" , "ChampagneLimousines-Italic" , italic ;  
 }
 
+/* barra ingredienti in homepage */
 #ingredienti{
     position: relative;
     background: rgb(238, 238, 238);
@@ -93,9 +90,10 @@ table{
     cursor: pointer;
     margin-left: auto;
     margin-right: auto; 
-    border-radius: 5%;
+    border-radius: 5px;
 }
 
+/* formattazione generale bottoni */
 .bottoni{
     position: relative;
     background: rgb(238, 238, 238);
@@ -110,16 +108,17 @@ table{
     margin-right: auto; 
     font-family: "Champagne & Limousines" , "ChampagneLimousines-Italic" , italic ; 
     font-size: 1.5vw;
-    border-radius: 5%; 
+    border-radius: 5px; 
 }
 
+/* formattazione per bottone aggiungi ricette*/
 .bottoni2{
     position: relative;
     background: rgb(238, 238, 238);
     border: none;
     padding: 0vw;
-    height: 4vw;
-    width: 6vw;
+    height: 2vw;
+    width: 10vw;
     text-align: center;
     display: inline-block;
     cursor: pointer;
@@ -127,12 +126,12 @@ table{
     margin-right: auto; 
     font-family: "Champagne & Limousines" , "ChampagneLimousines-Italic" , italic ; 
     font-size: 1.5vw;
-    border-radius: 5%; 
+    border-radius: 5px; 
 }
 
 #bottoni_pos{
     position: relative;
-    left: 20vw;
+    left: 17vw;
 }
 
 #pulsanti {
@@ -147,33 +146,6 @@ table{
     right: 20vw;
     margin-top: 12vw;
 }
-
-#inEvidenza{
-    margin-top: 25%;
-    height: 40%;
-    background-color:rgb(175, 33, 33);
-    opacity: 0.75;
-    border-radius: 3px;
-    /* box-shadow: 1px 3px 10px 5px rgb(167, 33, 33) ; */
-    
-}
-
-#popolari{
-    display: inline-block;
-    float: left;
-    margin-left: 15px;
-    font-size: 30px;
-    font-weight: bold;
-    font-family: "Champagne & Limousines" , "ChampagneLimousines-Italic" , italic; 
-}
-
-#stelline{
-    display: inline-block;
-    float: left;
-    margin-top: 5px;
-    margin-left: 10px;
-}
-
 
 #dolciContainer{
     position: absolute;
@@ -236,4 +208,21 @@ table{
 
 .transizione[data-effect="fade-in"]:hover figcaption {
     opacity: 1;
+}
+
+video{
+    position: absolute;
+    margin-left: 30vw;
+    margin-top: 10vw;
+    width: 32vw;
+    height: 24vw;
+}
+
+#titoloRicetta{
+    position: absolute;
+    font-family: "Champagne & Limousines" , "ChampagneLimousines-Italic" , italic ; 
+    font-size: 2.5vw;
+    color: #fff;
+    margin-left: 42vw;
+    margin-top: 8vw;
 }

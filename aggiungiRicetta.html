@@ -4,41 +4,32 @@
       
         <!--api google per query (credo)-->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-        <link rel=stylesheet href="stile.css" type="text/css">
+        <link rel=stylesheet href="form.css" type="text/css">
     </head>
 
     <body>
-        <div id="generale" style="opacity: 1.0;"> 
-            <div id="container1">
-                <div id="pulsanti">
-                    <button class="bottoni" id="pulsanteLogout" onclick="funzioneLogoutRicetta()">Esci</button>
-                </div>
+        <div id="container"> 
+            <div id="pulsanti">
+                <button class="bottoni" id="pulsanteLogout" onclick="funzioneLogoutRicetta()">Esci</button>
+            </div>
 
-                <div id="formRicetta">
-                    <td><h2><input type="text" id="titolo" class="cella2" placeholder="Inserisci il titolo della ricetta" required ></td></h2>
-                    <div id="areaRicetta">  
-                        <td><input type="text" class="cella2" id="tempo"  placeholder="Inserisci il tempo della ricetta" required ></td>
-                        <br><br>
-                        <td><input type="text" class="cella2" id="difficolta"  placeholder="Inserisci la difficoltà" required ></td>
-                        <div id="listaIngredientiRicetta">
-                            <br>
-                            <input type="text" class="cella2" id="ingredienti"  placeholder="Inseriscigli ingredienti separati da virgole" required >
-                        </div>
-                        <div id="procedimento">
-                                <br>
-                                <td><input type="text" class="boxProcedimento" id="procedimentoRicetta" placeholder="Inserisci il procedimento" required ></td>      
-                        </div>
-                        <br>
-                        <td><input type="text" class="cella2" id="foto"  placeholder="inserisci una foto della ricetta o un link al video" required ></td>
-                        <br>
-                    </div>
-                </div>
+            <div id="aggiungiRicetta"> 
+                <input type="text" class="inserimento"  id="titolo" placeholder="Inserisci il titolo della tua ricetta" required>
                 <br><br>
-                <div id="bottoni_pos">
-                    <button class="bottoni2" id="aggiungi" onclick="aggiungi()">Aggiungi Ricetta</button>
-                </div>
-            </div>    
-        </div>
-<!------------FINO A QUI È OK  C'È DA SISTEMARE L'IMPAGINAZIONE------------>
+                <input type="text" class="inserimento_num" id="tempo"  placeholder="Inserisci il tempo" required>
+                <input type="text" class="inserimento_num" id="difficolta"  placeholder="Inserisci la difficoltà" required>
+                <br><br>
+                <input type="text" class="inserimento" id="ingredienti"  placeholder="Inseriscigli ingredienti separati da virgole" required>
+                <br><br>
+                <textarea class="inserimento_box" id="procedimentoRicetta" placeholder="Inserisci il procedimento" required></textarea>     
+                <br><br>
+                <input type="text" class="inserimento" id="foto"  placeholder="Inserisci la foto della tua ricetta" required>
+            </div>
+            <br><br>
+            <div id="bottoni_pos2">
+                <button class="bottoni2" id="aggiungi" onclick="aggiungi()">Aggiungi Ricetta</button>
+            </div>
+        </div>   
     </body>
+
 </html>

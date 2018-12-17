@@ -36,7 +36,35 @@ table{
     cursor: pointer;
     margin: auto; 
     font-family: "Champagne & Limousines" , "ChampagneLimousines-Italic" , italic ;
-    border-radius: 3%; 
+    border-radius: 5px; 
+}
+
+.inserimento_num{
+    position: relative;
+    background: rgb(238, 238, 238);
+    border: none;
+    height: 2vw;
+    width: 10vw;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+    margin: auto; 
+    font-family: "Champagne & Limousines" , "ChampagneLimousines-Italic" , italic ;
+    border-radius: 5px; 
+}
+
+.inserimento_box{
+    position: relative;
+    background: rgb(238, 238, 238);
+    border: none;
+    height: 10vw;
+    width: 20vw;
+    text-align: left;
+    display: inline-block;
+    cursor: pointer;
+    margin: auto; 
+    font-family: "Champagne & Limousines" , "ChampagneLimousines-Italic" , italic ;
+    border-radius: 5px; 
 }
 
 .bottoni{
@@ -53,10 +81,44 @@ table{
     margin-right: auto; 
     font-family: "Champagne & Limousines" , "ChampagneLimousines-Italic" , italic ; 
     font-size: 1.5vw;
-    border-radius: 5%; 
+    border-radius: 5px; 
+}
+
+/* formattazione per bottone aggiungi ricette*/
+.bottoni2{
+    position: relative;
+    background: rgb(238, 238, 238);
+    border: none;
+    padding: 0vw;
+    height: 2vw;
+    width: 10vw;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto; 
+    font-family: "Champagne & Limousines" , "ChampagneLimousines-Italic" , italic ; 
+    font-size: 1.5vw;
+    border-radius: 5px; 
 }
 
 #bottoni_pos{
     position: relative;
     left: 13vw;
+}
+
+#bottoni_pos2{
+    position: relative;
+    left: 5vw;
+}
+
+#pulsanti {
+    /* qui uso absolute per fissare accedi/iscriviti indipendentemente da tutto il resto */
+    position:absolute;
+    right:5px; top:5px; 
+}
+
+#container{
+    margin-left: 35vw;
+    margin-top: 10vw;
 }
