@@ -4,54 +4,51 @@
         <script src="homeStorage.js"></script> <!--mi serve per la funzione che chiama onload del body-->
         <!--api google per query (credo)-->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-        <link rel=stylesheet href="stile.css" type="text/css">
+        <link rel=stylesheet href="form.css" type="text/css">
     </head>
 
     <body onload="mostraRicetta()">
-        <div id="generale"> 
-            <div id="container" style="width:70%; margin: auto;">                
-                <div id="pulsanti" >
-                    <button class="bottoni" id="battonsIscriviti" onclick="funzioneIscriviti()"> Iscriviti</button>
-                    <button class="bottoni" id="battonsAccedi" onclick="funzioneAccedi()"> Accedi </button> 
+        <div id="container">                
+            <div id="pulsanti" >
+                <button class="bottoni" id="battonsIscriviti" onclick="funzioneIscriviti()"> Iscriviti</button>
+                <button class="bottoni" id="battonsAccedi" onclick="funzioneAccedi()"> Accedi </button> 
+            </div>
+            <button class="bottoni" id="pulsanteLogout" onclick="funzioneLogout()"> Logout </button>
+            
+            <div id="areaRicetta">
+                <input type="text" id="titolo" value="" class="inserimento" readonly></h2>
+                <br><br>
+                <input type="text" id="tempo" value="" class="inserimento_num" readonly>
+                <input type="text" id="difficolta" value="" class="inserimento_num" readonly>
+                <br><br>
+                <input type="text" id="ingredienti" value="" class="inserimento" readonly></label>
+                <br><br>
+                <input type="text" id="procedimento" value="" class="inserimento_box" readonly>
+                <br><br>
+                <label id="valutazioneStelle">voto utenti:</label>
+                <div id="voto">
+                    <img id ="6" height="20" width="20" src="star-off.png" class="Stelle" >
+                    <img id ="7" height="20" width="20" src="star-off.png" class="Stelle" >
+                    <img id ="8" height="20" width="20" src="star-off.png" class="Stelle" >
+                    <img id ="9" height="20" width="20" src="star-off.png" class="Stelle" >
+                    <img id ="10" height="20" width="20" src="star-off.png" class="Stelle" >
                 </div>
-               <button class="bottoni" id="pulsanteLogout" onclick="funzioneLogout()"> Logout </button>
-                
-                
-                <td><h2><input type="text" id="titolo" value="" class="Etichette" readonly></h2></td>
-                <div id="areaRicetta">  
+            </div>
+            <br><br>
+            <div id="bottoni_pos2">
+                <button class="bottoni2" id="pulsanteRecensione" onclick="valutaRicetta()"> valuta ricetta </button> <!--sta in ricettestorage.js-->
+            </div>
+            <form id="bottoni_pos2">
+                    <img id ="1" height="20" width="20" src="star-off.png" class="Stelle" onmouseover="colora(1)" onmouseout="decolora(1)" onclick="salvaNumStella(1)">
+                    <img id ="2" height="20" width="20" src="star-off.png" class="Stelle" onmouseover="colora(2)" onmouseout="decolora(2)" onclick="salvaNumStella(2)">
+                    <img id ="3" height="20" width="20" src="star-off.png" class="Stelle" onmouseover="colora(3)" onmouseout="decolora(3)" onclick="salvaNumStella(3)">
+                    <img id ="4" height="20" width="20" src="star-off.png" class="Stelle" onmouseover="colora(4)" onmouseout="decolora(4)" onclick="salvaNumStella(4)">
+                    <img id ="5" height="20" width="20" src="star-off.png" class="Stelle" onmouseover="colora(5)" onmouseout="decolora(5)" onclick="salvaNumStella(5)">
                     <br>
-                    <td><input type="text" id="tempo" value="" class="Etichette" readonly></td>
                     <br>
-                    <td><input type="text" id="difficolta" value="" class="Etichette" readonly></td>
-                    <td><input type="text" id="ingredienti" value="" class="Etichette" readonly></label></td>
-                    <br>
-                    <div id="procedimentoDiv">
-                            <br>
-                            <td><input type="text" id="procedimento" value="" class="Etichette" readonly></td>      
-                    </div>
-                    <td><label id="valutazioneStelle">voto utenti:</label>
-                        <div id="divVoto">
-                            <img id ="1voto" height="20" width="20" src="star-off.png" class="Stelle" >
-                            <img id ="2voto" height="20" width="20" src="star-off.png" class="Stelle" >
-                            <img id ="3voto" height="20" width="20" src="star-off.png" class="Stelle" >
-                            <img id ="4voto" height="20" width="20" src="star-off.png" class="Stelle" >
-                            <img id ="5voto" height="20" width="20" src="star-off.png" class="Stelle" >
-                        </div>
-                    </td>
-                </div>
-                <button class="bottoni" id="pulsanteRecensione" onclick="valutaRicetta()"> valuta ricetta </button> <!--sta in ricettestorage.js-->
-            </div>   
-            <!------------FINO A QUI È OK  C'È DA SISTEMARE L'IMPAGINAZIONE------------>     
-        </div>  
-        <form id="formValuta" style="display:none;">
-                <img id ="1" height="20" width="20" src="star-off.png" class="Stelle" onmouseover="colora(1)" onmouseout="decolora(1)" onclick="salvaNumStella(1)">
-                <img id ="2" height="20" width="20" src="star-off.png" class="Stelle" onmouseover="colora(2)" onmouseout="decolora(2)" onclick="salvaNumStella(2)">
-                <img id ="3" height="20" width="20" src="star-off.png" class="Stelle" onmouseover="colora(3)" onmouseout="decolora(3)" onclick="salvaNumStella(3)">
-                <img id ="4" height="20" width="20" src="star-off.png" class="Stelle" onmouseover="colora(4)" onmouseout="decolora(4)" onclick="salvaNumStella(4)">
-                <img id ="5" height="20" width="20" src="star-off.png" class="Stelle" onmouseover="colora(5)" onmouseout="decolora(5)" onclick="salvaNumStella(5)">
-                <br>
-                <br>
-                <button class="bottoni" id="pulsanteValutazione" onclick="mandaValutazione()"> conferma valutazione </button>
-        </form>     
+                    <button class="bottoni" id="pulsanteValutazione" onclick="mandaValutazione()"> conferma </button>
+            </form> 
+        </div>       
+            
     </body>
 </html>

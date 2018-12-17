@@ -1,3 +1,4 @@
+
 function funzioneCerca(){
     
     var storageIngredienti=JSON.parse(localStorage.getItem('Ricette'));
@@ -69,11 +70,11 @@ function mostraRicetta(){
 }
 
 function stampaStelle(n){
-    var intero = Math.round(n);
-    for(i=intero; i>0; n--){
-        var imm=document.getElementById(i+"voto")
+    for(i=6; i<n+5; i++){
+        var imm=document.getElementById(i);
         imm.src="star-on.png";
     }
+    
 }
 
 function funzioneIscriviti(){
