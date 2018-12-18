@@ -20,12 +20,11 @@
                 for(i=0; i<array.length; i++){
                     if(array[i].email==emailIs)
                         return true;}
-                return false // da implementare
+                return false 
             }
 
 
-            function salvaUtente(){ // non fa reindirizzamento 
-                alert("in funzione");
+            function salvaUtente(){ 
                 nomeIs=document.getElementById("nome").value;
                 cognomeIs=document.getElementById("cognome").value;
                 emailIs=document.getElementById("email").value;
@@ -41,8 +40,7 @@
                         var p =new persona( nomeIs, cognomeIs, emailIs, passwordIs);
                         var array=[];
                         array.push(p);
-                        localStorage.setItem('Utente',JSON.stringify(array));//deve essere una stringa perciò serializzo
-                        alert("registrazione ok");
+                        localStorage.setItem('Utente',JSON.stringify(array));
                         sessionStorage.setItem('Loggato',  JSON.stringify("si"));
                         
                     }
@@ -51,17 +49,14 @@
                         var array=JSON.parse( localStorage.getItem('Utente'));
 
                         if(esisteEmail(emailIs, array) == true){
-                            alert("la mail è gia registrata");
+                            alert("la mail è gia registrata, prova ad inserirne un'altra");
                             return false;
                         }
                         array.push(p);
-                        localStorage.setItem('Utente',JSON.stringify(array));//deve essere una stringa perciò serializzo
-                        alert("registrazione ok");
+                        localStorage.setItem('Utente',JSON.stringify(array));
                         sessionStorage.setItem('Loggato',  JSON.stringify("si"));
                         
                     }
-                
-                
                 }
                 window.location.href="./grafica.html";
 
@@ -74,7 +69,7 @@
         <div id="pulsante_home">
             <button class="bottoni" id="pulsanteHome" onclick="funzioneHome()">Home</button>
         </div>
-        <form id ="formIscrivi" onsubmit="return salvaUtente()" >  <!-- METTERE POST SE NON USI VISUAL STUDIO CODE!!!!!!-->
+        <form id ="formIscrivi" onsubmit="return salvaUtente()" >
             <table>
                 <tr>
                     <td><label for="Nome">Nome</label></td>

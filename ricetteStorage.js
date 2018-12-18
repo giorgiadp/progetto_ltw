@@ -8,6 +8,7 @@ function ricetta(titolo, tempo, difficolta, ingredienti, procedimento, foto, ste
     this.stelle=stelle;
 }
 
+//usato in aggiungiRicetta.html
 function aggiungi(){
     titolo=document.getElementById("titolo").value;
     tempo=document.getElementById("tempo").value;
@@ -26,8 +27,8 @@ function aggiungi(){
         alert("Il tempo deve essere un valore numerico.");
         return false;
     }
-    if(isNaN(difficolta)){ 
-        alert("La difficoltà deve essere un valore numerico.");
+    if(isNaN(difficolta) && (difficolta<1 || difficolta>5)){ 
+        alert("La difficoltà deve essere un valore numerico tra 1 e 5");
         return false;
     }
 
@@ -53,7 +54,7 @@ function aggiungi(){
 
 }
 
-
+//usata in ricette.html
 function verificaLogin(){
     if(JSON.parse(sessionStorage.getItem('Loggato'))=='si'){
         return true;
@@ -63,6 +64,7 @@ function verificaLogin(){
     }
 }
 
+//usata in ricette.html
 function valutaRicetta(){
     if(verificaLogin()){
         $("#valuta").css("display", "block");
@@ -74,6 +76,7 @@ function valutaRicetta(){
 
 let numeroStella=0;
 
+//usata in ricette.html
 function colora(n){
 
     for(i=n; i>0; n--){
@@ -83,6 +86,7 @@ function colora(n){
     return n;
 }
 
+//usata in ricette.html
 function decolora(n){
     if (numeroStella==0){
         for(i=n; i>0; n--){
@@ -93,16 +97,16 @@ function decolora(n){
     return n;
 }
 
-
-
+//usata in ricette.html
 function salvaNumStella(n){
     numeroStella=n;
     
 }
 
+//usata in ricette.html
 function mandaValutazione(){
     if(numeroStella==0){
-        alert("Inserisci una valutazione.");
+        alert("Inserisci una valutazione!");
     }
     else{
         var index=JSON.parse(sessionStorage.getItem('indiceRicetta'));

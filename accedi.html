@@ -21,13 +21,12 @@
             passwordA=document.getElementById("password").value;
             var a=JSON.parse( localStorage.getItem('Utente'));
             if(verifica(emailA,passwordA,a)==true){
-                alert("credenziali confermate");
                 sessionStorage.setItem('Loggato', JSON.stringify("si"));
                 window.location.href="./grafica.html";
                 return false;
             }
             
-            alert("credenziali non valide");
+            alert("ATTENZIONE: credenziali non valide!");
             return false;
             
         }

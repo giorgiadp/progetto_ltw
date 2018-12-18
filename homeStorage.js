@@ -1,4 +1,4 @@
-
+//usata in grafica 
 function funzioneCerca(){
     
     var storageIngredienti=JSON.parse(localStorage.getItem('Ricette'));
@@ -57,6 +57,7 @@ function funzioneCerca(){
 
 }
 
+//in on load di ricetta.html
 function mostraRicetta(){
     cambiabottoniRicetta();
     var index=JSON.parse(sessionStorage.getItem('indiceRicetta'));
@@ -72,6 +73,7 @@ function mostraRicetta(){
     $("#valuta").css("display", "none");
 }
 
+//in on load di ricetta.html
 function stampaStelle(n){
     for(i=6; i<n+5; i++){
         var imm=document.getElementById(i);
@@ -88,6 +90,7 @@ function funzioneAccedi(){
     window.location.href="./accedi.html";
 }
 
+//usato in mostra ricetta quindi in ricetta.html
 function cambiabottoniRicetta(){
     var s=JSON.parse(sessionStorage.getItem('Loggato'));
     if(s == 'si'){
