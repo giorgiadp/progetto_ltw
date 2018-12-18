@@ -1,8 +1,3 @@
-function funzioneLogoutRicetta(){
-    window.location.href="./grafica.html";
-}
-
-
 function ricetta(titolo, tempo, difficolta, ingredienti, procedimento, foto, stelle){
     this.titolo=titolo;
     this.tempo=tempo;

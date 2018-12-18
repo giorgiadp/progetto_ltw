@@ -4,6 +4,7 @@
             <title>Accedi</title>
             <meta charset="utf-8"/>
             <link rel=stylesheet href="form.css" type="text/css">
+            <script src="homeStorage.js"></script>
     </head>
     <script>
         function verifica(emailA, passwordA, a){
@@ -32,7 +33,8 @@
         }
     </script>
     <body >
-        <form id="formAccedi" onsubmit="return checkUtente()" action="#">
+        <form id="formAccedi" onsubmit="return checkUtente()">
+            <button class="bottoni" id="pulsanteHome" onclick="funzioneHome()"> Home </button>
             <table>    
                 <tr>
                     <td><label for="Email" class="Etichette">Email</label></td>

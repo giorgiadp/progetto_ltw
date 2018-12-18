@@ -19,7 +19,7 @@ function funzioneCerca(){
             c=0;
             for(k=0; k<arrayStorage.length; k++){
                 //ciclo sulla lista degli ingredienti cercati
-                for (i=0; i<listaIngredienti.length; i++){
+                for (i=0; i<listaIngredienti.length; i++){ 
                     if(arrayStorage[k] == listaIngredienti[i]){
                         c++;
                     }
@@ -120,8 +120,13 @@ function funzioneLogout(){
     document.getElementById("pulsanti").style.display="block"
     document.getElementById("pulsanteLogout").style.display="none"
     document.getElementById("aggiungiRicetta").style.display="none"
+    confirm("Sei sicuro di voler uscire?");
 } 
 
 function aggiungiRicetta(){
     window.location.href="./aggiungiRicetta.html"
+}
+
+function funzioneHome(){
+    window.location.href="./grafica.html";
 }

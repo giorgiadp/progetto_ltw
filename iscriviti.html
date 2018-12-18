@@ -3,7 +3,8 @@
     <head>
         <title>Iscriviti</title>
         <meta charset="utf-8"/>
-        <link rel=stylesheet href="form.css" type="text/css">  
+        <link rel=stylesheet href="form.css" type="text/css"> 
+        <script src="homeStorage.js"></script> 
     </head>
 
     <script>
@@ -71,7 +72,8 @@
 
     <body>
         
-        <form id ="formIscrivi" onsubmit="return salvaUtente()" action="#">  <!-- METTERE POST SE NON USI VISUAL STUDIO CODE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
+        <form id ="formIscrivi" onsubmit="return salvaUtente()" >  <!-- METTERE POST SE NON USI VISUAL STUDIO CODE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
+            <button class="bottoni" id="pulsanteHome" onclick="funzioneHome()"> Home </button>
             <table>
                 <tr>
                     <td><label for="Nome">Nome</label></td>
