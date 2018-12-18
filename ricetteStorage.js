@@ -18,16 +18,16 @@ function aggiungi(){
     stelle="0";
 
     if(titolo=="" || tempo=="" || difficolta=="" || ingredienti == "" || procedimento=="" || foto==""){
-        alert("tutti i campi sono obbligatori");
+        alert("Tutti i campi sono obbligatori.");
         return false;
     }
 
     if(isNaN(tempo)){ 
-        alert("il tempo deve avere un valore numerico");
+        alert("Il tempo deve essere un valore numerico.");
         return false;
     }
     if(isNaN(difficolta)){ 
-        alert("la difficolta deve avere un valore numerico");
+        alert("La difficoltà deve essere un valore numerico.");
         return false;
     }
 
@@ -47,7 +47,7 @@ function aggiungi(){
             localStorage.setItem('Ricette', JSON.stringify(a));
             
         }
-        alert("la ricetta è stata aggiunta correttamente");
+        alert("La ricetta è stata aggiunta correttamente.");
         window.location.href="./grafica.html";
     }
 
@@ -65,11 +65,10 @@ function verificaLogin(){
 
 function valutaRicetta(){
     if(verificaLogin()){
-        alert("sei loggato");
-        $("#formValuta").css("display", "block");
+        $("#valuta").css("display", "block");
     }
     else{
-        alert("per valutare la ricetta devi essere loggato");
+        alert("Attenzione! Per poter valutare la ricetta devi aver effettuato l'accesso.");
     }
 }
 
@@ -91,7 +90,6 @@ function decolora(n){
             imm.src="star-off.png";
         }
     }
-    alert(numeroStella);
     return n;
 }
 
@@ -104,17 +102,15 @@ function salvaNumStella(n){
 
 function mandaValutazione(){
     if(numeroStella==0){
-        alert("inserire una valutazione");
+        alert("Inserisci una valutazione.");
     }
     else{
         var index=JSON.parse(sessionStorage.getItem('indiceRicetta'));
         var listaRicette=JSON.parse(localStorage.getItem('Ricette'));
         var ricettaScelta= listaRicette[index];
-        alert(JSON.stringify( ricettaScelta));
         listaRicette.pop(ricettaScelta);
         var media= ricettaScelta.stelle;
         var nuovaMedia;
-        alert(media);
         if(media != 0){
             nuovaMedia= (numeroStella+media)/2;
             
@@ -123,13 +119,9 @@ function mandaValutazione(){
             nuovaMedia=numeroStella;
             
         }
-        alert(nuovaMedia);
         ricettaScelta.stelle=nuovaMedia;
         listaRicette[index]=ricettaScelta;
         localStorage["Ricette"]=JSON.stringify(listaRicette);
-        
-        
-        alert("ok baby");
     }
     
 }

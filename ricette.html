@@ -3,48 +3,62 @@
         <link rel=stylesheet href="form.css" type="text/css">
         <script src="ricetteStorage.js" ></script> 
         <script src="homeStorage.js"></script> <!--mi serve per la funzione che chiama onload del body-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     </head>
 
     <body onload="mostraRicetta()">
         <div id="container">                
             <div id="pulsanti" >
                 <button class="bottoni" id="battonsIscriviti" onclick="funzioneIscriviti()"> Iscriviti</button>
-                <button class="bottoni" id="battonsAccedi" onclick="funzioneAccedi()"> Accedi </button> 
+                <button class="bottoni" id="battonsAccedi" onclick="funzioneAccedi()"> Accedi </button>
             </div>
-            <button class="bottoni" id="pulsanteLogout" onclick="funzioneLogout()"> Logout </button>
-            <button class="bottoni" id="pulsanteHome" onclick="funzioneHome()"> Home </button>
+            <div id="pulsanti">
+                <button class="bottoni" id="pulsanteLogout" onclick="funzioneLogout()">Esci</button>
+            </div>
+            <div id="pulsante_home" >
+                <button class="bottoni" id="pulsanteHome" onclick="funzioneHome()"> Home </button>
+            </div>
+            <div id="fotoRicetta">
+                <img id="foto" src="">
+            </div>
             <div id="areaRicetta">
+                <label for="Nome">Titolo:</label>
+                <br>
                 <input type="text" id="titolo" value="" class="inserimento" readonly></h2>
                 <br><br>
+                <label for="Nome">Tempo:</label>
                 <input type="text" id="tempo" value="" class="inserimento_num" readonly>
+                <label for="Nome">Difficoltà:</label>
                 <input type="text" id="difficolta" value="" class="inserimento_num" readonly>
                 <br><br>
+                <label for="Nome">Ingredienti:</label>
+                <br>
                 <input type="text" id="ingredienti" value="" class="inserimento" readonly></label>
                 <br><br>
+                <label for="Nome">Procedimento:</label>
+                <br>
                 <input type="text" id="procedimento" value="" class="inserimento_box" readonly>
                 <br><br>
-                <label id="valutazioneStelle">Voto utenti:</label>
+                <label id="valutazioneStelle">Voto:</label>
                 <div id="voto">
-                    <img id ="6" height="20" width="20" src="star-off.png" class="Stelle" >
-                    <img id ="7" height="20" width="20" src="star-off.png" class="Stelle" >
-                    <img id ="8" height="20" width="20" src="star-off.png" class="Stelle" >
-                    <img id ="9" height="20" width="20" src="star-off.png" class="Stelle" >
-                    <img id ="10" height="20" width="20" src="star-off.png" class="Stelle" >
+                    <img id ="6" src="star-off.png" class="Stelle" >
+                    <img id ="7" src="star-off.png" class="Stelle" >
+                    <img id ="8" src="star-off.png" class="Stelle" >
+                    <img id ="9" src="star-off.png" class="Stelle" >
+                    <img id ="10" src="star-off.png" class="Stelle" >
                 </div>
             </div>
             <br><br>
             <div id="bottoni_pos2">
                 <button class="bottoni2" id="pulsanteRecensione" onclick="valutaRicetta()">Valuta ricetta</button> <!--sta in ricettestorage.js-->
             </div>
-            <form id="bottoni_pos2">
-                    <img id ="1" height="20" width="20" src="star-off.png" class="Stelle" onmouseover="colora(1)" onmouseout="decolora(1)" onclick="salvaNumStella(1)">
-                    <img id ="2" height="20" width="20" src="star-off.png" class="Stelle" onmouseover="colora(2)" onmouseout="decolora(2)" onclick="salvaNumStella(2)">
-                    <img id ="3" height="20" width="20" src="star-off.png" class="Stelle" onmouseover="colora(3)" onmouseout="decolora(3)" onclick="salvaNumStella(3)">
-                    <img id ="4" height="20" width="20" src="star-off.png" class="Stelle" onmouseover="colora(4)" onmouseout="decolora(4)" onclick="salvaNumStella(4)">
-                    <img id ="5" height="20" width="20" src="star-off.png" class="Stelle" onmouseover="colora(5)" onmouseout="decolora(5)" onclick="salvaNumStella(5)">
-                    <br>
-                    <br>
-                    <button class="bottoni" id="pulsanteValutazione" onclick="mandaValutazione()"> conferma </button>
+            <form id="valuta" >
+                    <img id ="1" src="star-off.png" class="Stelle" onmouseover="colora(1)" onmouseout="decolora(1)" onclick="salvaNumStella(1)">
+                    <img id ="2" src="star-off.png" class="Stelle" onmouseover="colora(2)" onmouseout="decolora(2)" onclick="salvaNumStella(2)">
+                    <img id ="3" src="star-off.png" class="Stelle" onmouseover="colora(3)" onmouseout="decolora(3)" onclick="salvaNumStella(3)">
+                    <img id ="4" src="star-off.png" class="Stelle" onmouseover="colora(4)" onmouseout="decolora(4)" onclick="salvaNumStella(4)">
+                    <img id ="5" src="star-off.png" class="Stelle" onmouseover="colora(5)" onmouseout="decolora(5)" onclick="salvaNumStella(5)">
+                    <button class="bottoni" id="pulsanteValutazione" onclick="mandaValutazione()">Conferma</button>
             </form> 
         </div>       
             

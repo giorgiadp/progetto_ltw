@@ -16,7 +16,7 @@ body{
 
 #formCerca{
     position: absolute;
-    margin-top: 12vw;
+    margin-top: 15vw;
     left: 0vw;
 }
 
@@ -36,7 +36,7 @@ table{
 }
 
 img{
-    height: 10vw;
+    height: 11vw;
 }
 
 /* checkbox ingredienti */
@@ -153,9 +153,9 @@ img{
 
 #dolciContainer{
     position: absolute;
-    top: 40vw;
+    top: 38vw;
     height: 16vw;
-    width: 98%;
+    width: 94vw;
     left: 1vw;
     background-color:rgb(175, 33, 33);
     border-radius: 5px;
@@ -171,8 +171,8 @@ img{
 
 #dolce{
     position: relative;
-    left: 1vw;
-    top: 1vw;   
+    left: 4vw;
+    top: 1.5vw;   
 }
 
 /* specifiche per gestire la transizione sui dolci */
@@ -227,6 +227,19 @@ video{
     font-family: "Champagne & Limousines" , "ChampagneLimousines-Italic" , italic ; 
     font-size: 2.5vw;
     color: #fff;
-    margin-left: 42vw;
+    margin-left: 48vw;
     margin-top: 8vw;
+}
+
+input{
+    font-family: "Champagne & Limousines" , "ChampagneLimousines-Italic" , italic ; 
+    font-size: 1.5vw;
+}
+
+#ingredientiDolci{
+    position: absolute;
+    top: 15vw;
+    left: 10vw;
+    color:white;
+    font-size: 1.5vw;
 }

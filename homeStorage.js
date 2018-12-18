@@ -11,6 +11,10 @@ function funzioneCerca(){
     
     //ciclo sulle ricette dello storage
     var list=[];
+    if(stringaIngredienti==""){
+        alert("Inserisci almeno un ingrediente valido.");
+        return false;
+    }
     if(storageIngredienti != null){
         for(j=0; j<storageIngredienti.length; j++){
             //faccio divetare la stringa array
@@ -40,17 +44,15 @@ function funzioneCerca(){
         }
 
         if (max==0){
-            alert("ricetta non trovata, puoi inserire la tua ricetta dopo aver fatto il login!");
+            alert("Ricetta non trovata! Puoi inserire la tua dopo aver fatto l'accesso.");
         }
         else{
-            alert("ricetta trovata  " + storageIngredienti[ricMax].titolo);
             sessionStorage.setItem('indiceRicetta', JSON.stringify( ricMax));
-            window.location.href="./ricette.html";
-            
+            window.location.href="./ricette.html";   
         }
     }
     else{
-        alert("non sono presenti ricette, aggiungine una!");
+        alert("Non sono presenti ricette per gli ingredienti selezionati! Aggiungine una.");
     }
 
 }
@@ -65,8 +67,9 @@ function mostraRicetta(){
     document.getElementById('difficolta').value= stoRic.difficolta;
     document.getElementById('ingredienti').value= stoRic.ingredienti;
     document.getElementById('procedimento').value= stoRic.procedimento;
-    //document.getElementById('foto').value= stoRic.foto;
+    document.getElementById('foto').src= stoRic.foto;
     stampaStelle(stoRic.stelle);
+    $("#valuta").css("display", "none");
 }
 
 function stampaStelle(n){

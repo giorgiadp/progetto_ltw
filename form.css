@@ -12,6 +12,7 @@ body{
     background-image:url('sfondo.jpeg');
     background-size: cover;
     font-family: "Champagne & Limousines" , "ChampagneLimousines-Italic" , italic ; 
+    overflow: hidden;
 }
 
 #formIscrivi, #formAccedi{
@@ -30,7 +31,7 @@ table{
     background: rgb(238, 238, 238);
     border: none;
     height: 2vw;
-    width: 20vw;
+    width: 25vw;
     text-align: center;
     display: inline-block;
     cursor: pointer;
@@ -44,7 +45,7 @@ table{
     background: rgb(238, 238, 238);
     border: none;
     height: 2vw;
-    width: 10vw;
+    width: 7.7vw;
     text-align: center;
     display: inline-block;
     cursor: pointer;
@@ -58,13 +59,14 @@ table{
     background: rgb(238, 238, 238);
     border: none;
     height: 10vw;
-    width: 20vw;
+    width: 25vw;
     text-align: left;
     display: inline-block;
     cursor: pointer;
     margin: auto; 
     font-family: "Champagne & Limousines" , "ChampagneLimousines-Italic" , italic ;
-    border-radius: 5px; 
+    border-radius: 5px;
+    font-size: 1.5vw;
 }
 
 .bottoni{
@@ -109,7 +111,7 @@ table{
 
 #bottoni_pos2{
     position: relative;
-    left: 5vw;
+    left: 8vw;
 }
 
 #pulsanti {
@@ -119,7 +121,48 @@ table{
 }
 
 #container{
-    margin-left: 35vw;
+    margin-left: 40vw;
     margin-top: 10vw;
 }
 
+#pulsanti {
+    position:absolute;
+    right:5px; top:5px; 
+}
+
+#pulsante_home{
+    position:absolute;
+    left:5px; top:5px; 
+}
+
+input{
+    font-size: 1.5vw;
+}
+
+label{
+    font-size: 1.5vw;
+    text-decoration: underline;
+}
+
+#voto{
+    position: absolute;
+    left: 44vw;
+    top: 35vw;
+}
+
+.Stelle{
+    height: 1.5vw;
+    width: 1.5vw;
+}
+
+#valuta{
+    position: absolute;
+    left: 45vw;
+    top: 42vw;
+}
+
+#fotoRicetta{
+    position: absolute;
+    left: 8vw;
+    top: 16vw;
+}
