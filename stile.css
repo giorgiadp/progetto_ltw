@@ -11,12 +11,13 @@
 body{
     background-image:url('sfondo.jpeg');
     background-size: cover;
-    font-family: "Champagne & Limousines" , "ChampagneLimousines-Italic" , italic ; 
+    font-family: "Champagne & Limousines" , "ChampagneLimousines-Italic" , italic ;
+    overflow: hidden;
 }
 
 #formCerca{
     position: absolute;
-    margin-top: 15vw;
+    margin-top: 13vw;
     left: 0vw;
 }
 
@@ -112,7 +113,13 @@ img{
     margin-right: auto; 
     font-family: "Champagne & Limousines" , "ChampagneLimousines-Italic" , italic ; 
     font-size: 1.5vw;
-    border-radius: 5px; 
+    border-radius: 5px;
+    transition-property: background-color;
+    transition-duration: 0.1s;
+}
+
+.bottoni:hover {
+    background-color: #cfcfcf;
 }
 
 /* formattazione per bottone aggiungi ricette*/
@@ -130,7 +137,13 @@ img{
     margin-right: auto; 
     font-family: "Champagne & Limousines" , "ChampagneLimousines-Italic" , italic ; 
     font-size: 1.5vw;
-    border-radius: 5px; 
+    border-radius: 5px;
+    transition-property: background-color;
+    transition-duration: 0.1s;
+}
+
+.bottoni2:hover {
+    background-color: #cfcfcf;
 }
 
 #bottoni_pos{
@@ -153,9 +166,9 @@ img{
 
 #dolciContainer{
     position: absolute;
-    top: 38vw;
-    height: 16vw;
-    width: 94vw;
+    top: 33.5vw;
+    height: 15vw;
+    width: 98%;
     left: 1vw;
     background-color:rgb(175, 33, 33);
     border-radius: 5px;
@@ -171,7 +184,7 @@ img{
 
 #dolce{
     position: relative;
-    left: 4vw;
+    left: 4.8vw;
     top: 1.5vw;   
 }
 
@@ -236,10 +249,29 @@ input{
     font-size: 1.5vw;
 }
 
+#didascalia{
+    position: absolute;
+    top: 13vw;
+    left: 10vw;
+    color:white;
+    font-size: 1.8vw;
+}
+
 #ingredientiDolci{
     position: absolute;
-    top: 15vw;
+    top: 20vw;
     left: 10vw;
     color:white;
     font-size: 1.5vw;
+}
+
+a{
+    font-family: "Champagne & Limousines" , "ChampagneLimousines-Italic" , italic ; 
+    color: #fff;
+    transition-property: background-color;
+    transition-duration: 0.1s;
+}
+
+.link:hover {
+    color:rgb(175, 33, 33);
 }

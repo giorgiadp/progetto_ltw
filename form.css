@@ -84,6 +84,12 @@ table{
     font-family: "Champagne & Limousines" , "ChampagneLimousines-Italic" , italic ; 
     font-size: 1.5vw;
     border-radius: 5px; 
+    transition-property: background-color;
+    transition-duration: 0.1s;
+}
+
+.bottoni:hover {
+    background-color: #cfcfcf;
 }
 
 /* formattazione per bottone aggiungi ricette*/
@@ -102,6 +108,12 @@ table{
     font-family: "Champagne & Limousines" , "ChampagneLimousines-Italic" , italic ; 
     font-size: 1.5vw;
     border-radius: 5px; 
+    transition-property: background-color;
+    transition-duration: 0.1s;
+}
+
+.bottoni2:hover {
+    background-color: #cfcfcf;
 }
 
 #bottoni_pos{
@@ -163,6 +175,13 @@ label{
 
 #fotoRicetta{
     position: absolute;
-    left: 8vw;
-    top: 16vw;
+    left: 12vw;
+    top: 18vw;
+    width: 20vw;
+    height: 20vw;
+}
+
+#fotoRicetta img {
+    height: 70%;
+    width: 100%;
 }

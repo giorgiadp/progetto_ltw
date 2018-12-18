@@ -27,8 +27,12 @@ function aggiungi(){
         alert("Il tempo deve essere un valore numerico.");
         return false;
     }
-    if(isNaN(difficolta) && (difficolta<1 || difficolta>5)){ 
-        alert("La difficoltà deve essere un valore numerico tra 1 e 5");
+    if(isNaN(difficolta)){ 
+        alert("La difficoltà deve essere un valore numerico.");
+        return false;
+    }
+    if(difficolta<1 || difficolta>5){ 
+        alert("La difficoltà deve essere un valore numerico tra 1 e 5.");
         return false;
     }
 
