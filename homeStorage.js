@@ -64,7 +64,7 @@ function mostraRicetta(){
     var stoRic= JSON.parse(localStorage.getItem('Ricette'))[index];
 
     document.getElementById('titolo').value= stoRic.titolo;
-    document.getElementById('tempo').value= stoRic.tempo;
+    document.getElementById('tempo').value= stoRic.tempo + "min";
     document.getElementById('difficolta').value= stoRic.difficolta;
     document.getElementById('ingredienti').value= stoRic.ingredienti;
     document.getElementById('procedimento').value= stoRic.procedimento;
@@ -75,7 +75,7 @@ function mostraRicetta(){
 
 //in on load di ricetta.html
 function stampaStelle(n){
-    for(i=6; i<n+5; i++){
+    for(i=6; i<n+6; i++){
         var imm=document.getElementById(i);
         imm.src="star-on.png";
     }
@@ -125,7 +125,8 @@ function funzioneLogout(){
     sessionStorage.setItem('Loggato', JSON.stringify("no"));
     document.getElementById("pulsanti").style.display="block"
     document.getElementById("pulsanteLogout").style.display="none"
-    document.getElementById("aggiungiRicetta").style.display="none"
+    if(document.getElementById("aggiungiRicetta")!= null)
+        document.getElementById("aggiungiRicetta").style.display="none"
     confirm("Sei sicuro di voler uscire?");
 } 
 

@@ -31,7 +31,7 @@ table{
     background: rgb(238, 238, 238);
     border: none;
     height: 2vw;
-    width: 25vw;
+    width: 30vw;
     text-align: center;
     display: inline-block;
     cursor: pointer;
@@ -45,7 +45,21 @@ table{
     background: rgb(238, 238, 238);
     border: none;
     height: 2vw;
-    width: 7.7vw;
+    width: 15vw;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+    margin: auto; 
+    font-family: "Champagne & Limousines" , "ChampagneLimousines-Italic" , italic ;
+    border-radius: 5px; 
+}
+
+.inserimento_num2{
+    position: relative;
+    background: rgb(238, 238, 238);
+    border: none;
+    height: 2vw;
+    width: 10.2vw;
     text-align: center;
     display: inline-block;
     cursor: pointer;
@@ -59,14 +73,29 @@ table{
     background: rgb(238, 238, 238);
     border: none;
     height: 10vw;
-    width: 25vw;
+    width: 30vw;
     text-align: left;
     display: inline-block;
     cursor: pointer;
     margin: auto; 
     font-family: "Champagne & Limousines" , "ChampagneLimousines-Italic" , italic ;
     border-radius: 5px;
-    font-size: 1.5vw;
+    font-size: 1.1vw;
+}
+
+.inserimento_box2{
+    position: relative;
+    background: rgb(238, 238, 238);
+    border: none;
+    height: 4vw;
+    width: 30vw;
+    text-align: left;
+    display: inline-block;
+    cursor: pointer;
+    margin: auto; 
+    font-family: "Champagne & Limousines" , "ChampagneLimousines-Italic" , italic ;
+    border-radius: 5px;
+    font-size: 1.1vw;
 }
 
 .bottoni{
@@ -123,7 +152,7 @@ table{
 
 #bottoni_pos2{
     position: relative;
-    left: 8vw;
+    left: 10vw;
 }
 
 #pulsanti {
@@ -133,8 +162,8 @@ table{
 }
 
 #container{
-    margin-left: 40vw;
-    margin-top: 10vw;
+    margin-left: 35vw;
+    margin-top: 12vw;
 }
 
 #pulsanti {
@@ -158,8 +187,8 @@ label{
 
 #voto{
     position: absolute;
-    left: 44vw;
-    top: 35vw;
+    left: 39.5vw;
+    top: 37.5vw;
 }
 
 .Stelle{
@@ -170,18 +199,31 @@ label{
 #valuta{
     position: absolute;
     left: 45vw;
-    top: 42vw;
+    top: 45vw;
 }
 
 #fotoRicetta{
     position: absolute;
-    left: 12vw;
-    top: 18vw;
+    left: 8vw;
+    top: 16vw;
+    width: 25vw;
+    height: 25vw;
+}
+
+#fotoRicetta img {
+    height: 70%;
+    width: 100%;
+}
+
+#gif{
+    position: absolute;
+    left: 8vw;
+    top: 15.5vw;
     width: 20vw;
     height: 20vw;
 }
 
-#fotoRicetta img {
+#gif img {
     height: 70%;
     width: 100%;
 }

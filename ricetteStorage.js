@@ -79,21 +79,23 @@ function valutaRicetta(){
 }
 
 let numeroStella=0;
+let click=0;
 
 //usata in ricette.html
 function colora(n){
-
-    for(i=n; i>0; n--){
-        var imm=document.getElementById(n)
-        imm.src="star-on.png";
+    if(click==0){
+        for(; n>0 ; n--){
+            var imm=document.getElementById(n)
+            imm.src="star-on.png";
+        }
     }
     return n;
 }
 
 //usata in ricette.html
 function decolora(n){
-    if (numeroStella==0){
-        for(i=n; i>0; n--){
+    if (click==0){
+        for(; n>0; n--){
             var imm=document.getElementById(n)
             imm.src="star-off.png";
         }
@@ -104,7 +106,10 @@ function decolora(n){
 //usata in ricette.html
 function salvaNumStella(n){
     numeroStella=n;
-    
+    if(click==0)
+        click=1;
+    else
+        click=0;
 }
 
 //usata in ricette.html
@@ -120,12 +125,10 @@ function mandaValutazione(){
         var media= ricettaScelta.stelle;
         var nuovaMedia;
         if(media != 0){
-            nuovaMedia= (numeroStella+media)/2;
-            
+            nuovaMedia= (numeroStella+media)/2;        
         }
         else{
             nuovaMedia=numeroStella;
-            
         }
         ricettaScelta.stelle=nuovaMedia;
         listaRicette[index]=ricettaScelta;

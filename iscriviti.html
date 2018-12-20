@@ -36,7 +36,7 @@
 
                 if (typeof(Storage) != "undefined") { //verifica se lo storage è supportato
                     
-                    if(localStorage.length== 0){
+                    if(localStorage.length== 0){//non puo essere pieno quando faccio la prima iscrizione perche non ci possono essere ricette se prima nnon registro utenti
                         var p =new persona( nomeIs, cognomeIs, emailIs, passwordIs);
                         var array=[];
                         array.push(p);
